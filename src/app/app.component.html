@@ -1,0 +1,504 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">
+    Bootstrap
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <!-- ADMIN -->
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarAdminDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Menu 1
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/menu-1.1">Menu 1.1</a>
+        </div>
+      </li>
+      <!-- / ADMIN -->
+
+      <!-- ADMIN -->
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarAdminDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Menu 2
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/menu-2.1">Menu 2.1</a>
+        </div>
+      </li>
+      <!-- / ADMIN -->
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="card mt-3">
+    <div class="card-body">
+
+      <!-- Badges, Breadcrumb & Buttons
+      ================================================== -->
+
+      <div class="row">
+
+        <div class="col">
+          <!--Badges-->
+          <span *ngFor="let color of colors" [class]="'badge badge-' + color.key + ' mr-1'">{{color.name}}</span>
+
+          <!--Breadcrumb-->
+          <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb mt-2">
+              <li class="breadcrumb-item">Home</li>
+              <li class="breadcrumb-item">Library</li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+
+          <div>
+            <!--Buttons-->
+            <button type="button" *ngFor="let color of colors"
+              [class]="'mb-1 mr-1 btn btn-' + color.key">{{color.name}}</button>
+          </div>
+
+          <div class="mt-3">
+            <!--Outline Buttons-->
+            <button type="button" *ngFor="let color of colors"
+              [class]="'mb-1 mr-1 btn btn-outline-' + color.key">{{color.name}}</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+
+  <div class="card mt-3">
+    <div class="card-body">
+
+      <!-- Typography
+      ================================================== -->
+      <div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="typography">Typography</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Headings -->
+        <div class="row">
+          <div class="col-lg-4">
+            <div>
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+              <h3>
+                Heading
+                <small class="text-muted">with muted text</small>
+              </h3>
+              <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div>
+              <h2>Example body text</h2>
+              <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et
+                magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+              <p><small>This line of text is meant to be treated as fine print.</small></p>
+              <p>The following is <strong>rendered as bold text</strong>.</p>
+              <p>The following is <em>rendered as italicized text</em>.</p>
+              <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div>
+              <h2>Emphasis classes</h2>
+              <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+              <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p class="text-secondary">Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+              <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+              <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+              <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blockquotes -->
+        <div class="mt-5">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 id="type-blockquotes">Blockquotes</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div>
+                <blockquote class="blockquote">
+                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  </p>
+                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div>
+                <blockquote class="blockquote text-center">
+                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  </p>
+                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div>
+                <blockquote class="blockquote text-right">
+                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  </p>
+                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forms
+      ================================================== -->
+      <div class="mt-5">
+
+        <div class="row">
+          <div class="col">
+            <form>
+              <fieldset>
+                <legend>Legend</legend>
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="text" readonly="" class="form-control-plaintext" id="staticEmail"
+                      value="email@example.com">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelect1">Example select</label>
+                  <select class="form-control" id="exampleSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelect2">Example multiple select</label>
+                  <select multiple="" class="form-control" id="exampleSelect2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleTextarea">Example textarea</label>
+                  <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputFile">File input</label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for
+                    the above input. It's a bit lighter and easily wraps to a new line.</small>
+                </div>
+                <fieldset class="form-group">
+                  <legend>Radio buttons</legend>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1"
+                        value="option1" checked="">
+                      Option one is this and that—be sure to include why it's great
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2"
+                        value="option2">
+                      Option two can be something else and selecting it will deselect option one
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3"
+                        value="option3" disabled="">
+                      Option three is disabled
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="form-group">
+                  <legend>Checkboxes</legend>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" checked="">
+                      Option one is this and that—be sure to include why it's great
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" disabled="">
+                      Option two is disabled
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="form-group">
+                  <legend>Sliders</legend>
+                  <label for="customRange1">Example range</label>
+                  <input type="range" class="custom-range" id="customRange1">
+                </fieldset>
+              </fieldset>
+            </form>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <fieldset disabled="">
+                <label class="control-label" for="disabledInput">Disabled input</label>
+                <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..."
+                  disabled="">
+              </fieldset>
+            </div>
+
+            <div class="form-group">
+              <fieldset>
+                <label class="control-label" for="readOnlyInput">Readonly input</label>
+                <input class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here..."
+                  readonly="">
+              </fieldset>
+            </div>
+
+            <div class="form-group has-success">
+              <label class="form-control-label" for="inputValid">Valid input</label>
+              <input type="text" value="correct value" class="form-control is-valid" id="inputValid">
+              <div class="valid-feedback">Success! You've done it.</div>
+            </div>
+
+            <div class="form-group has-danger">
+              <label class="form-control-label" for="inputInvalid">Invalid input</label>
+              <input type="text" value="wrong value" class="form-control is-invalid" id="inputInvalid">
+              <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-form-label col-form-label-lg" for="inputLarge">Large input</label>
+              <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="inputLarge">
+            </div>
+
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault">Default input</label>
+              <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
+            </div>
+
+            <div class="form-group">
+              <label class="col-form-label col-form-label-sm" for="inputSmall">Small input</label>
+              <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" id="inputSmall">
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">Input addons</label>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forms -->
+        <div class="row mt-5">
+
+          <!-- Base Form -->
+          <div class="col-4">
+            <div class="row">
+              <div class="col">
+                <h2 id="type-blockquotes">Base Form</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      placeholder="Email address">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                      else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horizontal Form -->
+          <div class="col-4 offset-1">
+
+            <div class="row">
+              <div class="col">
+                <h2 id="type-blockquotes">Horizontal Form</h2>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col">
+                <form>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="E-mail">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                  </div>
+                  <fieldset class="form-group row">
+                    <legend class="col-form-label col-sm-2 float-sm-left pt-0">Radios</legend>
+                    <div class="col-sm-10">
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios1"
+                          value="option1" checked>
+                        <label class="custom-control-label" for="gridRadios1">
+                          First radio
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2"
+                          value="option2">
+                        <label class="custom-control-label" for="gridRadios2">
+                          Second radio
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios3"
+                          value="option3" disabled>
+                        <label class="custom-control-label" for="gridRadios3">
+                          Third disabled radio
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-group row">
+                    <div class="col-sm-10 offset-sm-2">
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox" id="gridCheck1">
+                        <label class="custom-control-label" for="gridCheck1">
+                          Example checkbox
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-10">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <!-- Table
+      ================================================== -->
+      <div class="mt-5">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="tables">Tables</h1>
+            </div>
+
+            <div>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Column heading</th>
+                    <th scope="col">Column heading</th>
+                    <th scope="col">Column heading</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-active">
+                    <th scope="row">Active</th>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Default</th>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr *ngFor="let color of colors" [class]="'table-' + color.key">
+                    <th scope="row">{{color.name}}</th>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /example -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.nav-item {
+    border-top: 5px solid $dark;
+    border-bottom: 5px solid $dark;
+
+    .nav-link {
+        font-size: 1rem;
+        font-weight: $font-weight-bold;
+    }
+
+    &.active,
+    &:hover {
+        border-bottom: 5px solid $primary;
+    }
+}
+
+.card {
+    box-shadow: 1px 1px 10px rgba(0, 48, 92, 0.08);
+}
+
+.breadcrumb-item {
+    color: $secondary;
+}
