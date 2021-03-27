@@ -1,4 +1,6 @@
 .nav-item {
+    margin-left: 8px;
+    margin-right: 8px;
     border-top: 5px solid $dark;
     border-bottom: 5px solid $dark;
 
@@ -10,6 +12,10 @@
     &.active,
     &:hover {
         border-bottom: 5px solid $primary;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
     }
 }
 
